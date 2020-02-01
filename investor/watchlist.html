@@ -71,7 +71,7 @@
       <!-- partial -->
       <div class="container-fluid page-body-wrapper">
         <!-- partial:partials/_sidebar.html -->
-        <nav class="sidebar sidebar-offcanvas" id="sidebar">
+         <nav class="sidebar sidebar-offcanvas" id="sidebar">
           <ul class="nav">
             <li class="nav-item nav-profile">
               <a href="#" class="nav-link">
@@ -101,17 +101,10 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="myproject.html">
-                <span class="menu-title">My Ideas</span>
-                <i class="mdi mdi-stack-overflow menu-icon"></i>
+              <a class="nav-link" href="watchlist.html">
+                <span class="menu-title">Watch List</span>
+                <i class="mdi mdi-format-list-bulleted-type menu-icon"></i>
               </a>
-            </li>
-            
-            
-           <li class="nav-item sidebar-actions">
-              
-                <a href="add_ideas.html" class="nav-link"><button class="btn btn-block btn-lg btn-gradient-primary">+ Add Ideas</button></a>
-             
             </li>
 
           </ul>
@@ -119,104 +112,38 @@
         <!-- partial -->
         <div class="main-panel">
           <div class="content-wrapper">
-		    <div class="row">
-		        <div class="col-xl-12 order-xl-1">
-		          <div class="card p-3">
+          
+            <div class="page-header">
+              <h3 class="page-title">
+                <span class="page-title-icon bg-gradient-primary text-white mr-2">
+                  <i class="mdi mdi-format-list-bulleted-type"></i>
+                </span> Watch List </h3>
+            
+            </div>
+            <div class="row">
+              <!-- Start Loop -->
+              <div class="col-md-4 stretch-card grid-margin">
 
-		            <div class="card-header bg-white border-0 mt-2">
-		              <div class="row align-items-center">
-		                <div class="col-8">
-		                  <h3 class="page-title">
-			                <span class="page-title-icon bg-gradient-primary text-white mr-2">
-			                  <i class="mdi mdi-lightbulb"></i>
-			                </span> Add Ideas </h3>
-		                </div>
-		                		                
-		              </div>
-		            </div>
-
-		            <div class="card-body">
-		              <form>
-		                
-		                <div class="pl-lg-4">
-		                	
-		                  <div class="row">
-
-		                    <div class="col-lg-6">
-		                      <div class="form-group">
-		                        <label class="form-control-label" for="input-username"> Title </label>
-		                        <input type="text" id="input-name" class="form-control form-control-alternative" placeholder="Name" value="">
-		                      </div>
-		                    </div>
-
-		                    <div class="col-lg-6">
-		                      <div class="form-group">
-		                        <label class="form-control-label" for="input-last-name"> Domain </label>
-		                        <input type="text" id="input-last-name" class="form-control form-control-alternative" placeholder="Last name" value="">
-		                      </div>
-		                    </div>
-
-		                  </div>
-		                  <div class="row">
-
-		                  	 <div class="col-lg-6">
-		                      <div class="form-group">
-		                        <label class="form-control-label" for="input-email"> No. of Collaborator </label>
-		                        <input type="email" id="input-email" class="form-control form-control-alternative" placeholder="No. of Collaborator">
-		                      </div>
-		                    </div>
-
-		                    
-
-		                    
-
-		                  </div>
-		                </div>
-		                <hr class="my-4" />
-		                <!-- Address -->
-		                
-		                <div class="pl-lg-4">
-		                	
-		                  
-		                  <div class="row">
-		                    <div class="col-lg-4">
-		                      <div class="form-group">
-		                        <label class="form-control-label" for="input-city"><i class="mdi mdi-github-circle"></i> Github</label>
-		                        <input type="text" id="" class="form-control form-control-alternative" placeholder="github link" value="">
-		                      </div>
-		                    </div>
-		                    <div class="col-lg-4">
-		                      <div class="form-group">
-		                        <label class="form-control-label" for="input-country"><i class="mdi mdi-bitbucket"></i> Bitbucket</label>
-		                        <input type="text" id="" class="form-control form-control-alternative" placeholder="Bitbucket link" value="">
-		                      </div>
-		                    </div>
-		                    <div class="col-lg-4">
-		                      <div class="form-group">
-		                        <label class="form-control-label" for="input-country"><i class="fab fa-gitlab"></i> Gitlab</label>
-		                        <input type="text" id="" class="form-control form-control-alternative" placeholder="Gitlab link">
-		                      </div>
-		                    </div>
-		                  </div>
-		                </div>
-		                
-		                <div class="pl-lg-4">
-		                	 
-		                  <div class="form-group">
-		                    <label>About idea</label>
-		                    <textarea rows="4" class="form-control form-control-alternative" placeholder="A few words about you ..."></textarea>
-		                  </div>
-		                  <button type="submit" class="btn btn-gradient-primary mr-2">Submit</button>
-		                </div>
-		                
-		              </form>
-		            </div>
-		          </div>
-		        </div>
-		    </div>
+                <div class="card bg-gradient-primary card-img-holder text-white">
+                  <a href="details.html" class="" style="text-decoration: none; color: white">
+                  <div class="card-body">
+                    <img src="../assets/images/dashboard/circle.svg" class="card-img-absolute" alt="circle-image" />
+                    <h4 class="font-weight-normal mb-3">Domain Name </h4>
+                    <h2 class="mb-4">Ideas Name </h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat.</p>
+                      <h6 class="card-text"><i class="mdi mdi-heart mdi-20px"></i> 100
+                     <i class="mdi mdi-eye mdi-20px ml-3"></i> 100</h6>
+                  </div>
+                </div></a>
+              </div>
+              <!-- end Loop -->
 
 
-
+              
+            </div><!--row end-->
           </div>
           <!-- content-wrapper ends -->
           <!-- partial:partials/_footer.html -->
