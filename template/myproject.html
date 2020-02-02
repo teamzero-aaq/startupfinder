@@ -22,7 +22,7 @@
   <body>
     <div class="container-scroller">
       <!-- partial:partials/_navbar.html -->
-       <nav class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+      <nav class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
         <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
           <a class="navbar-brand brand-logo" href="index.html"><i class="fas fa-search fa-sm text-primary"> Startup Finder</i></a>
           <a class="navbar-brand brand-logo-mini" href="index.html"><i class="fas fa-search fa-sm text-primary"></i></a>
@@ -101,10 +101,17 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="watchlist.html">
-                <span class="menu-title">Watch List</span>
-                <i class="mdi mdi-format-list-bulleted-type menu-icon"></i>
+              <a class="nav-link" href="myproject.html">
+                <span class="menu-title">My Ideas</span>
+                <i class="mdi mdi-stack-overflow menu-icon"></i>
               </a>
+            </li>
+            
+            
+            <li class="nav-item sidebar-actions">
+              
+                <a href="add_ideas.html" class="nav-link"><button class="btn btn-block btn-lg btn-gradient-primary">+ Add Ideas</button></a>
+             
             </li>
 
           </ul>
@@ -112,148 +119,121 @@
         <!-- partial -->
         <div class="main-panel">
           <div class="content-wrapper">
-        
-            <i class="mdi mdi-close" id="bannerClose" style="display: none;"></i>
-                
           
             <div class="page-header">
               <h3 class="page-title">
                 <span class="page-title-icon bg-gradient-primary text-white mr-2">
-                  <i class="mdi mdi-home"></i>
-                </span> Watch List </h3>
-              
+                  <i class="mdi mdi-lightbulb"></i>
+                </span> Ideas </h3>
+            
             </div>
             <div class="row">
+            {% for items in data %}
               <div class="col-md-4 stretch-card grid-margin">
-                <div class="card bg-gradient-danger card-img-holder text-white">
+                <div class="card bg-gradient-primary card-img-holder text-white">
                   <div class="card-body">
                     <img src="../assets/images/dashboard/circle.svg" class="card-img-absolute" alt="circle-image" />
-                    <h4 class="font-weight-normal mb-3">Views <i class="mdi mdi-eye mdi-24px float-right"></i>
+                    <h4 class="font-weight-normal mb-3">Domain Name <i class="mdi mdi-chart-line mdi-24px float-right"></i>
                     </h4>
-                    <h2 class="mb-5">15,0000</h2>
-                     <h6 class="card-text">Increased by 5%</h6>
-                    
+                    <h2 class="mb-4">Ideas Name</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat.</p>
+                      <h6 class="card-text"><i class="mdi mdi-heart mdi-20px"></i> 100
+                     <i class="mdi mdi-eye mdi-20px ml-3"></i> 100</h6>
+                  </div>
+                </div>
+              </div>
+              {% endfor %}
+              <div class="col-md-4 stretch-card grid-margin">
+                <div class="card bg-gradient-primary card-img-holder text-white">
+                  <div class="card-body">
+                    <img src="../assets/images/dashboard/circle.svg" class="card-img-absolute" alt="circle-image" />
+                    <h4 class="font-weight-normal mb-3">Domain Name <i class="mdi mdi-bookmark-outline mdi-24px float-right"></i>
+                    </h4>
+                    <h2 class="mb-4">Ideas Name</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat.</p>
+                       <h6 class="card-text"><i class="mdi mdi-heart mdi-20px"></i> 100
+                     <i class="mdi mdi-eye mdi-20px ml-3"></i> 100</h6>
                   </div>
                 </div>
               </div>
               <div class="col-md-4 stretch-card grid-margin">
-                <div class="card bg-gradient-info card-img-holder text-white">
+                <div class="card bg-gradient-primary card-img-holder text-white">
                   <div class="card-body">
                     <img src="../assets/images/dashboard/circle.svg" class="card-img-absolute" alt="circle-image" />
-                    <h4 class="font-weight-normal mb-3">Likes <i class="mdi mdi-heart-outline mdi-24px float-right"></i>
+                    <h4 class="font-weight-normal mb-3">Domain Name <i class="mdi mdi-diamond mdi-24px float-right"></i>
                     </h4>
-                    <h2 class="mb-5">45,6334</h2>
-                     <h6 class="card-text">Increased by 5%</h6>
-                   
+                    <h2 class="mb-4">Ideas Name</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat.</p>
+                     <h6 class="card-text"><i class="mdi mdi-heart mdi-20px"></i> 100
+                     <i class="mdi mdi-eye mdi-20px ml-3"></i> 100</h6>
+                  </div>
+                </div>
+              </div>
+
+               <div class="col-md-4 stretch-card grid-margin">
+                <div class="card bg-gradient-primary card-img-holder text-white">
+                  <div class="card-body">
+                    <img src="../assets/images/dashboard/circle.svg" class="card-img-absolute" alt="circle-image" />
+                    <h4 class="font-weight-normal mb-3">Domain Name <i class="mdi mdi-chart-line mdi-24px float-right"></i>
+                    </h4>
+                    <h2 class="mb-4">Ideas Name</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat.</p>
+                      <h6 class="card-text"><i class="mdi mdi-heart mdi-20px"></i> 100
+                     <i class="mdi mdi-eye mdi-20px ml-3"></i> 100</h6>
                   </div>
                 </div>
               </div>
               <div class="col-md-4 stretch-card grid-margin">
-                <div class="card bg-gradient-success card-img-holder text-white">
+                <div class="card bg-gradient-primary card-img-holder text-white">
                   <div class="card-body">
                     <img src="../assets/images/dashboard/circle.svg" class="card-img-absolute" alt="circle-image" />
-                    <h4 class="font-weight-normal mb-3">Commits <i class="mdi mdi-checkbox-multiple-marked-outline mdi-24px float-right"></i>
+                    <h4 class="font-weight-normal mb-3">Domain Name <i class="mdi mdi-bookmark-outline mdi-24px float-right"></i>
                     </h4>
-                    <h2 class="mb-5">95,5741</h2>
-                    <h6 class="card-text">Increased by 5%</h6>
+                    <h2 class="mb-4">Ideas Name</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat.</p>
+                       <h6 class="card-text"><i class="mdi mdi-heart mdi-20px"></i> 100
+                     <i class="mdi mdi-eye mdi-20px ml-3"></i> 100</h6>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="row">
-              <div class="col-md-7 grid-margin stretch-card">
-                <div class="card">
+              <div class="col-md-4 stretch-card grid-margin">
+                <div class="card bg-gradient-primary card-img-holder text-white">
                   <div class="card-body">
-                    <div class="clearfix">
-                      <h4 class="card-title float-left">Visit And Sales Statistics</h4>
-                      <div id="visit-sale-chart-legend" class="rounded-legend legend-horizontal legend-top-right float-right"></div>
-                    </div>
-                    <canvas id="visit-sale-chart" class="mt-4"></canvas>
+                    <img src="../assets/images/dashboard/circle.svg" class="card-img-absolute" alt="circle-image" />
+                    <h4 class="font-weight-normal mb-3">Domain Name <i class="mdi mdi-diamond mdi-24px float-right"></i>
+                    </h4>
+                    <h2 class="mb-4">Ideas Name</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat.</p>
+                     <h6 class="card-text"><i class="mdi mdi-heart mdi-20px"></i> 100
+                     <i class="mdi mdi-eye mdi-20px ml-3"></i> 100</h6>
                   </div>
                 </div>
               </div>
-              <div class="col-md-5 grid-margin stretch-card">
-                <div class="card">
-                  <div class="card-body">
-                    <h4 class="card-title">Traffic Sources</h4>
-                    <canvas id="traffic-chart"></canvas>
-                    <div id="traffic-chart-legend" class="rounded-legend legend-vertical legend-bottom-left pt-4"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-12 grid-margin">
-                <div class="card">
-                  <div class="card-body">
-                    <h4 class="card-title">Recent Tickets</h4>
-                    <div class="table-responsive">
-                      <table class="table">
-                        <thead>
-                          <tr>
-                            <th> Assignee </th>
-                            <th> Subject </th>
-                            <th> Status </th>
-                            <th> Last Update </th>
-                            <th> Tracking ID </th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td>
-                              <img src="assets/images/faces/face1.jpg" class="mr-2" alt="image"> David Grey </td>
-                            <td> Fund is not recieved </td>
-                            <td>
-                              <label class="badge badge-gradient-success">DONE</label>
-                            </td>
-                            <td> Dec 5, 2017 </td>
-                            <td> WD-12345 </td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <img src="assets/images/faces/face2.jpg" class="mr-2" alt="image"> Stella Johnson </td>
-                            <td> High loading time </td>
-                            <td>
-                              <label class="badge badge-gradient-warning">PROGRESS</label>
-                            </td>
-                            <td> Dec 12, 2017 </td>
-                            <td> WD-12346 </td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <img src="assets/images/faces/face3.jpg" class="mr-2" alt="image"> Marina Michel </td>
-                            <td> Website down for one week </td>
-                            <td>
-                              <label class="badge badge-gradient-info">ON HOLD</label>
-                            </td>
-                            <td> Dec 16, 2017 </td>
-                            <td> WD-12347 </td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <img src="assets/images/faces/face4.jpg" class="mr-2" alt="image"> John Doe </td>
-                            <td> Loosing control on server </td>
-                            <td>
-                              <label class="badge badge-gradient-danger">REJECTED</label>
-                            </td>
-                            <td> Dec 3, 2017 </td>
-                            <td> WD-12348 </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                  </div>
-                </div>
-              </div>
-          
-             
-            </div>
+            </div><!--row end-->
           </div>
           <!-- content-wrapper ends -->
           <!-- partial:partials/_footer.html -->
           <footer class="footer">
             <div class="d-sm-flex justify-content-center justify-content-sm-between">
-              <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2017 <a href="" >Startup Finder</a>. All rights reserved.</span>
+              <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2017 <a href="#" target="_blank">Startup Finder</a>. All rights reserved.</span>
               <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Hand-crafted & made with <i class="mdi mdi-heart text-danger"></i></span>
             </div>
           </footer>

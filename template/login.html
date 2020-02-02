@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html" charset="utf-8" />
+		<title>Login</title>
+
+		<link href="{% static 'assets/css/bootstrap.min.css'  %}" rel="stylesheet" type="text/css" />
+		<link href="{% static 'assets/css/styles.css'   %}" rel="stylesheet" type="text/css" />
+
+</head>
+<body>
+
+
+
+		<section class="login-section">
+			<div class="container-fluid">
+					<div class="row">
+	                    <div class="col-sm-6">
+	                        <div class="image-wrapper">
+	                            <img class="img-responsive" src="{% static 'assets/images/login2.gif' %}" alt="">
+	                        </div>
+	                    </div>
+                     	<div class="col-sm-6">
+              			  <div class="content-wrapper label-input">
+		                    <h2 class="page-title mb-4">Sign in to Explore</h2>
+		                    <form method="post" action="">
+								{% csrf_token %}
+		                         <div class="phone-wrapper field-wrapper">
+		                            <input type="text" name="uname" placeholder="Email">
+		                        </div>
+		                        <div class="pass-wrapper field-wrapper">
+		                           <input type="password" name="password" placeholder="Password" />
+		                        </div>
+		                        <input class="form-submit-btn" type="submit" value="Log in">
+		                       		<a class="form-link1 create-ac-btn" href="#">Forgot your password? </a>
+									<hr>
+									<p class="text-center">New Here? Register for <a class="form-link create-ac-btn" href="register_user">Individual </a> or
+									<a class="form-link create-ac-btn" href="register_investor">Investor</a></p>
+									
+							</form>
+               			 </div>
+            			</div>
+                </div>
+          	</div>
+
+		</section>
+
+
+
+
+		<script src="{% static 'assets/js/jquery.min.js' %}"></script>
+		<script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+	</body>
+
+</html>
