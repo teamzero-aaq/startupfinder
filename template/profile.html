@@ -1,0 +1,269 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Startup Finder</title>
+    <!-- plugins:css -->
+    <link rel="stylesheet" href="{% static '/assets/vendors/mdi/css/materialdesignicons.min.css' %}">
+    <link rel="stylesheet" href="{% static '/assets/vendors/css/vendor.bundle.base.css' %}">
+    <!-- endinject -->
+    <!-- Plugin css for this page -->
+    <!-- End plugin css for this page -->
+    <!-- inject:css -->
+    <!-- endinject -->
+    <!-- Layout styles -->
+    <link rel="stylesheet" href="{% static '/assets/css/style.css' %}">
+    <!-- End layout styles -->
+    <link rel="shortcut icon" href="{%  static '/assets/images/favicon.png' %}" />
+    <link rel="stylesheet" href="{% static '/assets/fontawesome/css/all.css' %}">
+  </head>
+  <body>
+    <div class="container-scroller">
+      <!-- partial:partials/_navbar.html -->
+      <nav class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+        <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+          <a class="navbar-brand brand-logo" href="index.html"><i class="mdi mdi-magnify text-primary font-weight-600"> Startup Finder</i></a>
+          <a class="navbar-brand brand-logo-mini" href="index.html"><i class="mdi mdi-magnify text-primary"></i></a>
+        </div>
+        <div class="navbar-menu-wrapper d-flex align-items-stretch">
+          <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+            <span class="mdi mdi-menu"></span>
+          </button>
+          <div class="search-field d-none d-md-block">
+            <form class="d-flex align-items-center h-100" action="#">
+              <div class="input-group">
+                <div class="input-group-prepend bg-transparent">
+                  <i class="input-group-text border-0 mdi mdi-magnify"></i>
+                </div>
+                <input type="text" class="form-control bg-transparent border-0" placeholder="Search projects">
+              </div>
+            </form>
+          </div>
+          <ul class="navbar-nav navbar-nav-right">
+            <li class="nav-item nav-profile dropdown">
+              <a class="nav-link dropdown-toggle" id="profileDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
+                <div class="nav-profile-img">
+                  <img src="../assets/images/faces/face1.jpg" alt="image">
+                  <span class="availability-status online"></span>
+                </div>
+                <div class="nav-profile-text">
+                  <p class="mb-1 text-black">David Greymaax</p>
+                </div>
+              </a>
+             <div class="dropdown-menu navbar-dropdown" aria-labelledby="profileDropdown">
+                <a class=" nav-link" href="profile.html">
+                  <i class="mdi mdi-cached mr-2 text-success"></i> Profile </a>
+                <div class="dropdown-divider"></div>
+                <a class=" nav-link" href="#">
+                  <i class="mdi mdi-logout mr-2 text-primary"></i> Signout </a>
+              </div>
+            </li>
+            
+            
+          </ul>
+          <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+            <span class="mdi mdi-menu"></span>
+          </button>
+        </div>
+      </nav>
+      <!-- partial -->
+      <div class="container-fluid page-body-wrapper">
+        <!-- partial:partials/_sidebar.html -->
+        <nav class="sidebar sidebar-offcanvas" id="sidebar">
+          <ul class="nav">
+            <li class="nav-item nav-profile">
+              <a href="#" class="nav-link">
+                <div class="nav-profile-image">
+                  <img src="../assets/images/faces/face1.jpg" alt="profile">
+                  <span class="login-status online"></span>
+                  <!--change to offline or busy as needed-->
+                </div>
+                <div class="nav-profile-text d-flex flex-column">
+                  <span class="font-weight-bold mb-2">David Grey. H</span>
+                  <span class="text-secondary text-small">Project Manager</span>
+                </div>
+                <i class="mdi mdi-bookmark-check text-success nav-profile-badge"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">
+                <span class="menu-title">Dashboard</span>
+                <i class="mdi mdi-home menu-icon"></i>
+              </a>
+            </li>
+           
+            <li class="nav-item">
+              <a class="nav-link" href="profile.html">
+                <span class="menu-title">Profile</span>
+                <i class="mdi mdi-account menu-icon"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="myproject.html">
+                <span class="menu-title">My Ideas</span>
+                <i class="mdi mdi-stack-overflow menu-icon"></i>
+              </a>
+            </li>
+            
+            
+           <li class="nav-item sidebar-actions">
+              
+                <a href="add_ideas.html" class="nav-link"><button class="btn btn-block btn-lg btn-gradient-primary">+ Add Ideas</button></a>
+             
+            </li>
+
+          </ul>
+        </nav>
+        <!-- partial -->
+        <div class="main-panel">
+          <div class="content-wrapper">
+		    <div class="row">
+		        <div class="col-xl-12 order-xl-1">
+		          <div class="card p-3">
+
+		            <div class="card-header bg-white border-0 mt-2">
+		              <div class="row align-items-center">
+		                <div class="col-8">
+		                  <h3 class="page-title">
+			                <span class="page-title-icon bg-gradient-primary text-white mr-2">
+			                  <i class="mdi mdi-lightbulb"></i>
+			                </span> Profile </h3>
+		                </div>
+		                <div class="col-4 text-right">
+		                  <a href="#!" class="btn btn-sm btn-gradient-primary">Edit</a>
+		                </div>		                
+		              </div>
+		            </div>
+
+		            <div class="card-body">
+		              <form action ="" method="POST">
+                    {% csrf_token %}
+		                <div class="pl-lg-4">
+		                	<h6 class="heading-small text-muted mb-4">User information</h6>
+		                  <div class="row">
+
+		                    <div class="col-lg-6">
+		                      <div class="form-group">
+		                        <label class="form-control-label" for="input-username"> First Name</label>
+		                        <input type="text" name="fname" id="input-name" class="form-control form-control-alternative" placeholder="Name" value="">
+		                      </div>
+		                    </div>
+
+		                    <div class="col-lg-6">
+		                      <div class="form-group">
+		                        <label class="form-control-label" for="input-last-name">Last name</label>
+		                        <input type="text" name="lname" id="input-last-name" class="form-control form-control-alternative" placeholder="Last name" value="">
+		                      </div>
+		                    </div>
+
+		                  </div>
+		                  <div class="row">
+
+		                  	 <div class="col-lg-6">
+		                      <div class="form-group">
+		                        <label class="form-control-label" for="input-email">Email address</label>
+		                        <input type="text" name="email" id="input-email" class="form-control form-control-alternative" placeholder="name@example.com">
+		                      </div>
+		                    </div>
+
+		                    <div class="col-lg-6">
+		                      <div class="form-group">
+		                        <label class="form-control-label" for="input-first-name">Education Qualification</label>
+		                        <input type="text" name="edu" id="input-first-name" class="form-control form-control-alternative" placeholder="Education Qualification" value="">
+		                      </div>
+		                    </div>
+
+		                    
+
+		                  </div>
+		                </div>
+		                <hr class="my-4" />
+		                <!-- Address -->
+		                
+		                <div class="pl-lg-4">
+		                	<h6 class="heading-small text-muted mb-4">Contact information</h6>
+		                  <div class="row">
+		                    <div class="col-md-12">
+		                      <div class="form-group">
+		                        <label class="form-control-label" for="input-address">Address</label>
+		                        <input id="input-address" name="address" class="form-control form-control-alternative" placeholder="Home Address" value="" type="text">
+		                      </div>
+		                    </div>
+		                  </div>
+		                  <div class="row">
+		                    <div class="col-lg-4">
+		                      <div class="form-group">
+		                        <label class="form-control-label" for="input-city">City</label>
+		                        <input type="text" name="city" id="input-city" class="form-control form-control-alternative" placeholder="City" value="">
+		                      </div>
+		                    </div>
+		                    <div class="col-lg-4">
+		                      <div class="form-group">
+		                        <label class="form-control-label" for="input-country">Country</label>
+		                        <input type="text" name="country" id="input-country" class="form-control form-control-alternative" placeholder="Country" value="">
+		                      </div>
+		                    </div>
+		                    <div class="col-lg-4">
+		                      <div class="form-group">
+		                        <label class="form-control-label" for="input-country">Postal code</label>
+		                        <input type="number" name="code" id="input-postal-code" class="form-control form-control-alternative" placeholder="Postal code">
+		                      </div>
+		                    </div>
+		                  </div>
+		                </div>
+		                <hr class="my-4" />
+		                <!-- Description -->
+		               
+		                <div class="pl-lg-4">
+		                	 
+		                  <div class="form-group">
+		                    <label>About Me</label>
+		                    <textarea rows="4" name="about_me" class="form-control form-control-alternative" placeholder="A few words about you ..."></textarea>
+		                  </div>
+                      <button type="submit" class="btn btn-gradient-primary mr-2">Submit</button>
+		                </div>
+		                
+		              </form>
+		            </div>
+		          </div>
+		        </div>
+		    </div>
+
+
+
+          </div>
+          <!-- content-wrapper ends -->
+          <!-- partial:partials/_footer.html -->
+          <footer class="footer">
+            <div class="d-sm-flex justify-content-center justify-content-sm-between">
+              <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2017 <a href="#" target="_blank">Startup Finder</a>. All rights reserved.</span>
+              <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Hand-crafted & made with <i class="mdi mdi-heart text-danger"></i></span>
+            </div>
+          </footer>
+          <!-- partial -->
+        </div>
+        <!-- main-panel ends -->
+      </div>
+      <!-- page-body-wrapper ends -->
+    </div>
+     <!-- container-scroller -->
+    <!-- plugins:js -->
+    <script src="{% static '/assets/vendors/js/vendor.bundle.base.js' %}"></script>
+    <!-- endinject -->
+    <!-- Plugin js for this page -->
+    <script src="{% static '/assets/vendors/chart.js/Chart.min.js' %}"></script>
+    <!-- End plugin js for this page -->
+    <!-- inject:js -->
+    <script src="{% static '/assets/js/off-canvas.js' %}"></script>
+    <script src="{% static '/assets/js/hoverable-collapse.js' %}"></script>
+    <script src="{% static '/assets/js/misc.js' %}"></script>
+    <!-- endinject -->
+    <!-- Custom js for this page -->
+    <script src="{% static '/assets/js/dashboard.js' %}"></script>
+    <script src="{% static '/assets/js/todolist.js' %}"></script>
+    <!-- End custom js for this page -->
+  </body>
+</html>
